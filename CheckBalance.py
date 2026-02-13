@@ -14,9 +14,10 @@ while True:
         print(cuenta.depositar(monto))
 
     elif opcion == "2":
-        print("Saldo actual:", cuenta.consultar_saldo())
+        print("Saldo actual:", cuenta.Consultar_saldo())
 
     elif opcion == "3":
+        
         print("Saliendo...")
         break
 

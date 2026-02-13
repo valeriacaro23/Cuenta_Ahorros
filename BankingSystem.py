@@ -8,7 +8,7 @@ class BankingSystem:
 
 
         self.saldo += monto
-        return f'Depósito exitoso. Nuevo saldo ${self.saldo}'
+        return f'Depósito exitoso. Nuevo saldo: ${self.saldo:,.2f}'
 
-    def obtener_saldo(self):
+    def Consultar_saldo(self):
         return self.saldo    
