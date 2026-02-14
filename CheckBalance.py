@@ -10,9 +10,11 @@ while True:
     opcion = input("Seleccione una opción: ")
 
     if opcion == "1":
-        monto = float(input("Ingrese el monto a depositar: "))
-        print(cuenta.depositar(monto))
-
+        try:
+            monto = float(input("Ingrese el monto a depositar: "))
+            print(cuenta.depositar(monto))
+        except:
+            print('Error: Debe ingresar un valor valido.')
     elif opcion == "2":
         print("Saldo actual:", cuenta.Consultar_saldo())
 
