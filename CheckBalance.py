@@ -1,11 +1,13 @@
 from BankingSystem import BankingSystem
+from Retirar import retirar
 
 cuenta = BankingSystem()
 
 while True:
     print("\n1. Depositar")
-    print("2. Consultar saldo")
-    print("3. Salir")
+    print("2. Retirar")
+    print("3. Consultar saldo")
+    print("4. Salir")
 
     opcion = input("Seleccione una opción: ")
 
@@ -14,13 +16,15 @@ while True:
         print(cuenta.depositar(monto))
 
     elif opcion == "2":
-        print("Saldo actual:", cuenta.Consultar_saldo())
+        monto = float(input("Ingrese el monto a retirar: "))
+        print(retirar(cuenta, monto))
 
     elif opcion == "3":
-        
+        print(f"Saldo actual: ${cuenta.Consultar_saldo():,.2f}")
+
+    elif opcion == "4":
         print("Saliendo...")
         break
 
     else:
         print("Opción inválida.")
-

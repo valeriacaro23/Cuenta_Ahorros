@@ -6,9 +6,9 @@ class BankingSystem:
         if monto <= 0:
             return 'El monto debe ser mayor que 0.'
 
-
         self.saldo += monto
         return f'Depósito exitoso. Nuevo saldo: ${self.saldo:,.2f}'
 
     def Consultar_saldo(self):
-        return self.saldo    
+        return self.saldo
+
