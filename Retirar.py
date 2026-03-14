@@ -1,4 +1,5 @@
 def retirar(cuenta, monto):
+    
     if monto <= 0:
         return 'El monto debe ser mayor que 0.'
 
