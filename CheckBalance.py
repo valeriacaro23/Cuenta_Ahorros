@@ -12,17 +12,17 @@ while True:
     opcion = input("Seleccione una opción: ")
 
     if opcion == "1":
-        try:
-            monto = float(input("Ingrese el monto a depositar: "))
-            print(cuenta.depositar(monto))
-        except:
-            print('Error: Debe ingresar un valor valido.')
-    elif opcion == "2":
-        monto = float(input("Ingrese el monto a retirar: "))
-        print(retirar(cuenta, monto))
+        monto = float(input("Ingrese el monto a depositar: "))
+        print(cuenta.depositar(monto))
 
+    elif opcion == "2":
+        try:
+            monto = float(input("Ingrese el monto a retirar: "))
+            print(retirar(cuenta, monto))
+        except ValueError:
+             print("Solo se permiten numeros")
     elif opcion == "3":
-        print(f"Saldo actual: ${cuenta.Consultar_saldo():,.2f}")
+            print(f"Saldo actual: ${cuenta.Consultar_saldo():,.2f}")
 
     elif opcion == "4":
         print("Saliendo...")
